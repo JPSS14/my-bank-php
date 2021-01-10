@@ -1,3 +1,3 @@
 <div class="main_footer">
-    <p class="logo">GuiaTi</p>
+    <p class="logo">MyBank</p>
 </div>

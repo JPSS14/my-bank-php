@@ -1,7 +1,7 @@
 <?php
 ob_start();
 define("BASE", "https://localhost/my-bank-php/");
-define("THEME", "guiati");
+define("THEME", "myBank");
 define("THEME_PATH", __DIR__ . "/Themes/" . THEME);
 define("THEME_LINK", BASE . "Themes/" . THEME);
 
