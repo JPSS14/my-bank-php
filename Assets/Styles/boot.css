@@ -93,3 +93,36 @@ html{
     padding: 5px;
     border-radius: 15px;
 }
+/* 
+    FORM: LOGIN and REGISTER
+*/
+.standard-form-div{
+    flex-basis: 20%;
+    margin-top: 45px;
+    padding: 7.8% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.standard-form-div-header{
+    flex-basis: 100%;
+    font-size: 2em;
+    text-align: center;
+}
+.form-div-header-h1{
+    font-size: 2em;
+}
+.standard-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: center;
+}
+.standard-form input{
+    flex-basis: 100%;
+    margin: 10px 0;
+    border: solid 3px #000;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px;
+}

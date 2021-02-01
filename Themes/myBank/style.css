@@ -166,35 +166,6 @@ FOOTER
     color: var(--mainThemeColor);
 }
 
-/* 
-LOGIN
-*/
-.login{
-    flex-basis: 20%;
-    margin: 70px 0;
-    padding: 7.8% 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.login_header{
-    flex-basis: 100%;
-    font-size: 2em;
-    text-align: center;
-}
-.login_form{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    justify-content: center;
-}
-.login_form input{
-    flex-basis: 100%;
-    margin: 10px 0;
-    border: solid 3px #000;
-    border-radius: 50px;
-    text-align: center;
-}
 
 /* 
 RESPONSIVE
