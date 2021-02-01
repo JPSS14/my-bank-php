@@ -13,3 +13,5 @@
 
 // //VIDEOS
 // require($configThemePath . "/videos.php");
+
+require($configThemePath . "/login.php");

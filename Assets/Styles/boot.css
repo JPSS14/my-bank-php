@@ -73,7 +73,7 @@ html{
 /* 
     BUTTON
 */
-.btn-blue{
+.btn{
     flex-basis: 100%;
     text-align: center;
     margin: 10px auto;
@@ -81,6 +81,8 @@ html{
     color: #fff;
     padding: 5px;
     border-radius: 15px;
+    cursor: pointer;
+    border: none !important;
 }
 .btn-white{
     flex-basis: 100%;

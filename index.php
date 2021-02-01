@@ -44,13 +44,13 @@ $configSiteName = "mybank";
             //error 404
             if (file_exists("{$configThemePath}/404.php") && !is_dir("{$configThemePath}/404.php")) {
                 require "{$configThemePath}/404.php";
-                //  var_dump($configThemePath . "/" . $configUrl[0]);
+                 var_dump($configThemePath . "/" . $configUrl[0]);
             } else {
                 echo "<div class='container'>Oppps</div>";
             }
         }
         //FOOTER
-        require($configThemePath . "/footer.php");
+        // require($configThemePath . "/footer.php");
 
         ?>
     </main>
