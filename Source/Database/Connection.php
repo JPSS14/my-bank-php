@@ -25,14 +25,10 @@ class Connection{
         if(empty(self::$instance)){
             try{
                 self::$instance = new PDO(
-                    "mysql:host=".self::HOST."; dbname=".
-                    self::DB,
-                    self::USER,
-                    self::PASSWORD,
-                    self::OPTIONS
+                    "mysql:host=".self::HOST."; dbname=".self::DB, self::USER, self::PASSWORD, self::OPTIONS
                 );
             }catch(PDOException $exception){
-                die("<h1>Whooooooops...deu ruim!</h1>");
+                die("<h1>Ih rapaz...deu ruim!</h1>");
             }
         }
         return self::$instance;
