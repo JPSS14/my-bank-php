@@ -38,7 +38,45 @@ class Usuario extends Model
 
     public function save(): ?Usuario
     {
-      
+        if(!$this->required()){
+            return null;
+        }
+
+        // User update
+        if (!empty($this->id)) {
+            $userId = $this->id;
+
+            $email = $this->read("SELECT id FROM usuarios WHERE email = :email AND id != :id", "email={$this->email}&id={$userId}");
+            
+            if($email->rowCount()){
+                $this->message = "O e-mail já está cadastrado";
+                return null;
+            }
+
+            $this->update(self::$entity, $this->safe(), "id= :id","id={$userId}");
+            if ($this->fail()) {
+                $this->message = "Erro ao atualizar verifique os dados";
+            }
+
+            $this->message = "Dados atualizados com sucesso!";
+        }
+
+        // User create
+        if (empty($this->id)) {
+            if ($this->find($this->email)) {
+                $this->message = "O e-mail já está cadastrado";
+                return null;
+            }
+
+            $userId = $this->create(self::$entity, $this->safe());
+
+            if ($this->fail()) {
+                $this->message = "Erro ao cadastrar verifique os dados";
+            }
+            $this->message = "Cadastro realizado com sucesso";
+        }
+
+        $this->data = $this->read("SELECT * FROM usuarios WHERE id = :id", "id={$userId}")->fetch();
         return $this;
     }
 

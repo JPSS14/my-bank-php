@@ -53,10 +53,18 @@ abstract class Model{
     }
 
     protected function safe(): ?array{
-        return [];
+        $safe = (array)$this->data;
+        foreach(static::$safe as $unset){
+            unset($safe[$unset]);
+        }
+        return $safe;
     }
 
     protected function filter(array $data): ?array{
-        return [];
+        $filter = [];
+        foreach($data as $key => $value){
+            $filter[$key] = (is_null($value) ? null : filter_var($value, FILTER_SANITIZE_SPECIAL_CHARS));
+        }
+        return $filter;
     }
 }
